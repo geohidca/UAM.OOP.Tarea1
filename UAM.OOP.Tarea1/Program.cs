@@ -20,8 +20,22 @@ namespace UAM.OOP.Tarea1
             lista.Insertar(new DVD (1, "DVD"));
             lista.Insertar(new Netflix() { ID = 1, Nombre = "Netflix" });
 
-            
-
+            var item = lista.Buscar(0);
+            if (item is DVD)   //CASTING --> Esto es un ejemplo de CASTING
+            {
+                Console.WriteLine(((DVD)item).ID);
+                Console.WriteLine(((DVD)item).Nombre);
+            }
+            else if (item is VHS)   //CASTING --> Esto es un ejemplo de CASTING
+            {
+                Console.WriteLine(((VHS)item).ID);
+                Console.WriteLine(((VHS)item).Nombre);
+            }
+            else if (item is Netflix)   //CASTING --> Esto es un ejemplo de CASTING
+            {
+                Console.WriteLine(((Netflix)item).ID);
+                Console.WriteLine(((Netflix)item).Nombre);
+            }
             Console.ReadKey();
         }
     }
