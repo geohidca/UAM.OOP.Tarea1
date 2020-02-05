@@ -8,7 +8,7 @@ namespace UAM.OOP.Tarea1
 {
     class Lista : Icrud<IReproductores>
     {
-        List<IReproductores> lista;
+        List<IReproductores> lista = new List<IReproductores>();
 
         public void Insertar(IReproductores term)
         {
